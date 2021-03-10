@@ -10,9 +10,7 @@ class Board extends React.Component
         return(
 
             <div>
-                <p>Board Component</p>
-                <List />
-                
+                <p>{this.props.board.title}</p>
             </div>
         )
     }
