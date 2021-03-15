@@ -5,11 +5,12 @@ class List extends React.Component
     render()
     {
         return(
-            <div>
-            <p>List Component</p>
-            < Card/>
-            < Card/>
-            < Card/>
+            <div className = "list">
+
+                <div className = "list-header">
+                    <p>{this.props.list.title}</p>
+                </div>
+
             </div>
         )
     }
