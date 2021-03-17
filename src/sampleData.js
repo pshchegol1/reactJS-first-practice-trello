@@ -33,6 +33,36 @@ const lists =
                 text: 'card 2',
             },
         ],
+    },
+    {
+        id: 200,
+        title: 'Garden ideas',
+        board: 1000,
+        cards:[
+            {
+                id: 1,
+                text: 'card 1',
+            },
+            {
+                id: 2,
+                text: 'card 2',
+            },
+        ],
+    },
+    {
+        id: 300,
+        title: 'Game ideas',
+        board: 1000,
+        cards:[
+            {
+                id: 1,
+                text: 'card 1',
+            },
+            {
+                id: 2,
+                text: 'card 2',
+            },
+        ],
     }
 ]
 

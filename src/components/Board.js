@@ -29,7 +29,7 @@ class Board extends React.Component
     {
         return(
 
-            <div className = "lists-wrapper">
+            <div className="lists-wrapper">
                 <button onClick = {this.createNewList}>New List</button>
                 {Object.keys(this.state.currentList).map(key => (
 
