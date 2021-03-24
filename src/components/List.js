@@ -4,6 +4,26 @@ import PropTypes from 'prop-types';
 
 class List extends React.Component
 {
+    state = {
+        currentCards: []
+    }
+    nameInput = React.createRef()
+    createNewCard = (e) =>{
+        e.preventDefault();
+
+        const card = {
+            text: this.nameInput.current.value,
+            listId: 'abc1213',
+            labels: [],
+            createdAt: new Date()
+        }
+        if(card.text)
+        {
+            this.setState({ currentCards: [...this.state.currentCards, card]})
+        }
+        this.nameInput.current.value = '';
+        console.log('new card added ' + card.text)
+    }
     render()
     {
         return(
@@ -16,6 +36,14 @@ class List extends React.Component
                     <Card key={key} data={this.props.list.cards[key]}/>
                     
                 ))}
+                <form onSubmit={this.createNewCard} 
+                className="new-card-wrapper">
+                    <input
+                    type="text"
+                    ref = {this.nameInput}
+                    name="name"
+                    placeholder=" + New Card"/>
+                </form>
             </div>
         )
     }

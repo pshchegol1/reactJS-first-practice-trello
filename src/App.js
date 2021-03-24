@@ -1,7 +1,10 @@
+import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+
 import logo from './logo.svg';
 import './App.css';
 import Board from './components/Board';
-import React from 'react';
+import PageNotFound from './components/pages/PageNotFound'
 import data from './sampleData';
 import Home from './components/pages/Home'
 
@@ -24,8 +27,36 @@ import Home from './components/pages/Home'
   {
     return(
       <div>
-        <Home boards = {this.state.boards} createNewBoard = {this.createNewBoard}/>
-        <Board/>
+        <BrowserRouter>
+        <Switch>
+            <Route 
+            exact 
+            path="/:userId/boards" 
+            render={(props) => (
+              <div>
+                <Home 
+                {...props}
+                boards = {this.state.boards} createNewBoard = {this.createNewBoard}/>
+              </div>
+            )}
+            />
+
+            <Route 
+            path="/board/:boardId"
+            render = {props => (
+              <div>
+                <Board
+                {...props}
+                />
+              </div>
+            )}
+            />
+
+            <Route component={PageNotFound}/>
+  {/*           <Home boards = {this.state.boards} createNewBoard = {this.createNewBoard}/>
+            <Board/> */}
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
