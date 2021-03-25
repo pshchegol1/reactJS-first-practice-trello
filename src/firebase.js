@@ -8,8 +8,8 @@ const config = {
     projectId: "react-trello-app-e6b6a",
     storageBucket: "react-trello-app-e6b6a.appspot.com",
     messagingSenderId: "636630859600",
-    appId: "1:636630859600:web:18a0d3ff640e7e2d287655",
-    measurementId: "G-32S2VCTJCS"
+    appId: "1:636630859600:web:4f33357b49a86ae4287655",
+    measurementId: "G-MDYQHSY4KP"
 }
 
 firebase.initializeApp(config)

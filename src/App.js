@@ -7,7 +7,7 @@ import Board from './components/Board';
 import PageNotFound from './components/pages/PageNotFound'
 import data from './sampleData';
 import Home from './components/pages/Home'
-/* import {boardsRef, listsRef, cardRef} from './firebase' */
+import {boardsRef, listsRef, cardRef} from './firebase'
 
 
  class App extends React.Component {
@@ -17,6 +17,7 @@ import Home from './components/pages/Home'
   componentDidMount()
   {
     this.setState({ boards: data.boards })
+
    
   }
 
