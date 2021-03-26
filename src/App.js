@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
+
 import logo from './logo.svg';
 import './App.css';
 import Board from './components/Board';
@@ -17,6 +18,7 @@ import {boardsRef, listsRef, cardRef} from './firebase'
   componentDidMount()
   {
     this.setState({ boards: data.boards })
+   
 
    
   }
